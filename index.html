@@ -266,14 +266,14 @@
     <nav id="webgazerNavbar" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <!-- The hamburger menu button -->
+          <!-- The hamburger menu button 漢堡選單按鈕 -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar">Menu</span>
           </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <!-- Accuracy -->
+            <!-- Accuracy 準確性 -->
             <li id="Accuracy"><a>Not yet Calibrated</a></li>
             <li><a onclick="Restart()" href="https://wzLin0716.github.io">Recalibrate</a></li>
             <li><a onclick="webgazer.applyKalmanFilter(!webgazer.params.applyKalmanFilter)" href="https://wzLin0716.github.io">Toggle Kalman Filter</a></li>
@@ -284,7 +284,7 @@
         </div>
       </div>
     </nav>
-    <!-- Calibration points -->
+    <!-- Calibration points 校準點-->
     <div class="calibrationDiv">
       <input type="button" class="Calibration" id="Pt1" style="background-color: red; opacity: 0.2;">
       <input type="button" class="Calibration" id="Pt2" style="background-color: red; opacity: 0.2;">
@@ -297,11 +297,11 @@
       <input type="button" class="Calibration" id="Pt9" style="background-color: red; opacity: 0.2;">
     </div>
 
-    <!-- Modal -->
+    <!-- Modal 模態-->
     <div id="helpModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
 
-        <!-- Modal content-->
+        <!-- Modal content 模態內容-->
         <div class="modal-content">
           <div class="modal-body">
             <img src="./index/calibration.png" width="100%" height="100%" alt="webgazer demo instructions">
@@ -315,7 +315,7 @@
       </div>
     </div>
 
-    <!-- Latest compiled JavaScript -->
+    <!-- Latest compiled JavaScript 最新編譯的 JavaScript-->
     <script src="./index/resize_canvas.js"></script>
     <script src="./index/bootstrap.min.js"></script>
 
@@ -323,9 +323,10 @@
 
     <div class="swal-overlay" tabindex="-1">
       <div class="swal-modal" role="dialog" aria-modal="true">
-        <div class="swal-title" style="">Calibration</div>
-        <div class="swal-text" style="">
-          Please click on each of the 9 points on the screen. You must click on each point 5 times till it goes yellow. This will calibrate your eye movements.
+        <div class="swal-title" style="font-size: 16px;">校準</div>
+        <div class="swal-text" style="font-size: 13px;">
+          請點擊屏幕上的 9 個點中的每一個。 您必須點擊每個點 5 次，直到它變黃。 這將校準您的眼球運動。
+          <!--Please click on each of the 9 points on the screen. You must click on each point 5 times till it goes yellow. This will calibrate your eye movements.-->
         </div>
         <div class="swal-footer">
           <div class="swal-button-container">

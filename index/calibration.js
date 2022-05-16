@@ -18,7 +18,7 @@ function ClearCanvas(){
 function PopUpInstruction(){
   ClearCanvas();
   swal({
-    title:"Calibration",
+    title:"校準",//Calibration
     text: "請點擊屏幕上的 9 個點中的每一個。 您必須點擊每個點 5 次，直到它由紅變黃。 這將校準您的眼球運動。",
     buttons:{
       cancel: false,
@@ -83,7 +83,7 @@ $(document).ready(function(){
             // notification for the measurement process 測量過程通知
             swal({
               title: "Calculating measurement",
-              text: "Please don't move your mouse & stare at the middle dot for the next 5 seconds. This will allow us to calculate the accuracy of our predictions.",
+              text: "在接下來的 5 秒內，請不要移動鼠標並盯著中間的點。 這將使我們能夠計算預測的準確性。",
               closeOnEsc: false,
               allowOutsideClick: false,
               closeModal: true
@@ -101,7 +101,7 @@ $(document).ready(function(){
                       var accuracyLabel = "<a>Accuracy | "+precision_measurement+"%</a>";
                       document.getElementById("Accuracy").innerHTML = accuracyLabel; // Show the accuracy in the nav bar. 在導航欄中顯示準確性。
                       swal({
-                        title: "Your accuracy measure is " + precision_measurement + "%",
+                        title: "您的準確度衡量標準是" + precision_measurement + "%",
                         allowOutsideClick: false,
                         buttons: {
                           cancel: "Recalibrate",
@@ -128,18 +128,18 @@ $(document).ready(function(){
 });
 
 /**
- * Show the Calibration Points
+ * Show the Calibration Points 顯示校準點
  */
 function ShowCalibrationPoint() {
   $(".Calibration").show();
-  $("#Pt5").hide(); // initially hides the middle button
+  $("#Pt5").hide(); // initially hides the middle button 最初隱藏中間按鈕
 }
 
 /**
-* This function clears the calibration buttons memory
+* This function clears the calibration buttons memory 此功能清除校準按鈕內存
 */
 function ClearCalibration(){
-  // Clear data from WebGazer
+  // Clear data from WebGazer 從 WebGazer 清除數據
 
   $(".Calibration").css('background-color','red');
   $(".Calibration").css('opacity',0.2);
@@ -150,6 +150,7 @@ function ClearCalibration(){
 }
 
 // sleep function because java doesn't have one, sourced from http://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+// sleep 函數，因為 java 沒有，來自 http://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
