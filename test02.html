@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>刪除測驗</title>
+        <script type="text/javascript">//js語法
+            window.onload = function(){
+                var pictype = ['apple','bell','bird','car','fish','grass','guitar','gun','horse','house','key','mushroom','saw','teapot','tree'];//圖片種類
+                var ra_num = 15 , ra_save = 15;
+
+                for(var i = 0 ; i<1000 ; i++){
+
+                    while(ra_num == ra_save){
+                        ra_num = parseInt(Math.random()*15);
+                    }   
+
+                    var Img15 = document.createElement("img");
+                    Img15.src = "./file/"+pictype[ra_num]+".png";Img15.width="60";
+
+                    var div = document.getElementById('mbdiv');
+                    div.appendChild(Img15);
+
+                    ra_save=ra_num;
+                }
+            };
+        </script>
+        <style type="text/css">
+            .mbdiv{ width: 100%;    height: 100%; }
+        </style>
+    </head>
+    <body lang="zh-TW">
+        <!--<canvas id="canvas" width=100% height=100% style="cursor:crosshair;"></canvas>創建畫布-->
+        <div id="mbdiv">
+        </div>
+    </body>
+</html>
